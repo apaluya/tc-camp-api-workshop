@@ -1,10 +1,15 @@
 language: bash
-
-services:
-  - docker
-
-before_install:
-  - docker pull pandoc/core:2.7.2
+dist: trusty
+sudo: false
+addons:
+  apt:
+    packages:
+    - haskell-platform
+install:
+- cabal update
+- cabal install pandoc
+before_script:
+- export PATH=$PATH:/home/travis/.cabal/bin
 
 script:
-  - docker run --volume "`pwd`:/data" --entrypoint "`pwd`/build.sh" pandoc/core:2.7.2
+  - bash build.sh
