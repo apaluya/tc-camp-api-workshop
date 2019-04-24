@@ -8,4 +8,4 @@ addons:
 
 script:
   - pandoc --version
-  - bash build.sh
+  - ./build.sh
