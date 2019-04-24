@@ -5,4 +5,4 @@ before_install:
   - sudo apt-get install -y pandoc pandoc-citeproc
 
 script:
-  - bash build.sh
+  - bash build.sh || travis_terminate 1;
