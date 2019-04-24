@@ -1,15 +1,10 @@
 language: bash
-dist: trusty
-sudo: false
+dist: xenial
 addons:
   apt:
+    update: true
     packages:
-    - haskell-platform
-install:
-- cabal update
-- cabal install pandoc
-before_script:
-- export PATH=$PATH:/home/travis/.cabal/bin
+    - pandoc
 
 script:
-  - bash build.sh
+  - pandoc --version
