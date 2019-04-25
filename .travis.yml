@@ -5,8 +5,18 @@ addons:
     update: true
     packages:
     - pandoc
-
 script:
-  - pandoc --version
-  - pandoc -t revealjs -s -o restful-apis.html restful-apis.md -V revealjs-url=https://revealjs.com -V transition=cube -V theme=sky -i
-  - pandoc -t revealjs -s -o docs-as-code.html docs-as-code.md -V revealjs-url=https://revealjs.com -V transition=cube -V theme=sky -i
+- pandoc --version
+- pandoc -t revealjs -s -o restful-apis.html restful-apis.md -V revealjs-url=https://revealjs.com
+  -V transition=cube -V theme=sky -i
+- pandoc -t revealjs -s -o docs-as-code.html docs-as-code.md -V revealjs-url=https://revealjs.com
+  -V transition=cube -V theme=sky -i
+deploy:
+  provider: releases
+  api_key:
+    secure: OV5hmkPmwsGOk6u3X3vL7NtPPOrItjvVb7q8/mbMW9Ji/glEBy/r0ufNvFmi2TKUO6lYKP7F/kFLECRLGC5Crsdl/N4hiS35zhn4b5cVuuhsjI8/wuERdFFVP7FrOvsbRxiEk5qtb0B2084rx06OujEtgr27MlINHUbb9bFEPN2tDlq2GlHwnEImQyVJrNYffS9Vl1znRVdZYPPmE8srDo7SIQEkeaeD78+Zp12h7WltRCqiLPHdvu9TXuzNspcb8XFn0hybWS7qufyMIHmnAkLZtfA6IU2W8J3cmtDqe2pHJgCjnuHXd7ZLmD09O2F4nsY3mh5bxrM+52AF3NywMI+7VY4lkK7ZKpOG5EOuvDNX11crAz+go36v8E2IMW4s5qptj2EBcfk7KRzpP7lNH/pPFb9oVgQgS/AELRBWQJoNqU9j7FVXWGIMNqz+0u4o0x1YbgDLVCK707cJC1hGjtZgT2R9sFHT2U00SOb4QYBT6r678xh6r6qTzToYP54s7w2+0FU2ztv0ERIdO/K7LIO2m/4AWfatgVczhy6hyONidRuGYvBxIRAuL+Yywm69ROp2KTBa41Zjdss9rfmziOmEVhFWzUol9ufmzNy2mCxDJmqED4P2TEkI9swYOrtU/PpVGsrEDi67KEaDwXxqAcxQY2RnIwAdjkbBJCghEs4=
+  file:
+    - docs-as-code.html
+    - restful-apis.html
+  on:
+    repo: apaluya/tc-camp-api-workshop
