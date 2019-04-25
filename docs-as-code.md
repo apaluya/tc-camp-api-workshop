@@ -63,19 +63,22 @@ File Formats
 Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
 ```
 
-## Editors
+## Text Editors
 
-- CLI editors (vim, emacs, etc.)
-- GUI editors (Atom, Sublime Text, Notepad++)
-- XML editors (Oxygen, XMetaL)
+- [Atom](https://atom.io/)
+- [Notepad++](https://notepad-plus-plus.org/)
+- [Sublime Text](https://www.sublimetext.com/)
+- [vim](https://www.vim.org/)
+- [emacs](https://www.gnu.org/software/emacs/)
+- many, many others
 
-## Version control
+## Version Control
 
 Git predominates, though there are others (Subversion, Mercurial, Perforce)
 
 - [git the simple guide](http://rogerdudler.github.io/git-guide/)
 
-## Project repositories
+## Project Repositories
 
 Code is managed in project repositories, which enable collaboration by distributed teams. Popular project repositories include the following:
 
@@ -83,7 +86,7 @@ Code is managed in project repositories, which enable collaboration by distribut
 - [Gitlab](https://about.gitlab.com/)
 - [Bitbucket](https://bitbucket.org/).
 
-## Publishing tools
+## Publishing Tools
 
 - [Doxygen](http://www.doxygen.nl/)
 - [Hugo](https://gohugo.io/)
@@ -94,15 +97,15 @@ Code is managed in project repositories, which enable collaboration by distribut
 - [Swagger](https://swagger.io/tools/)
 - many, many others
 
-## Publishing tools
+## Publishing Tools
 
 When selecting a tool, let your content needs be your guide, not the current fad!
 
-## Automation server
+## Automation Server
 
 An automation server manages build jobs. Jenkins, Bamboo, and TeamCity are popular.
 
-## Artifact repositories
+## Artifact Repositories
 
 Build artifacts are managed in repositories such as Archiva, Artifactory, Sonatype Nexus. Artifacts are tagged and versioned.
 
@@ -120,5 +123,3 @@ Build artifacts are managed in repositories such as Archiva, Artifactory, Sonaty
 
 
 # Questions?
-
-# Thank You
