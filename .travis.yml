@@ -22,3 +22,6 @@ deploy:
   on:
     repo: apaluya/tc-camp-api-workshop
     tags: true
+  branches:
+    only:
+      - master
