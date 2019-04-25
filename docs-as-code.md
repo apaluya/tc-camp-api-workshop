@@ -86,6 +86,11 @@ Code is managed in project repositories, which enable collaboration by distribut
 - [Gitlab](https://about.gitlab.com/)
 - [Bitbucket](https://bitbucket.org/).
 
+## Project Repositories
+
+
+[https://github.com/apaluya/tc-camp-api-workshop](https://github.com/apaluya/tc-camp-api-workshop)
+
 ## Publishing Tools
 
 - [Doxygen](http://www.doxygen.nl/)
@@ -105,9 +110,17 @@ When selecting a tool, let your content needs be your guide, not the current fad
 
 An automation server manages build jobs. Jenkins, Bamboo, and TeamCity are popular.
 
+## Automation Server
+
+[Travis CI](https://travis-ci.org/apaluya)
+
 ## Artifact Repositories
 
 Build artifacts are managed in repositories such as Archiva, Artifactory, Sonatype Nexus. Artifacts are tagged and versioned.
+
+## Artifact Repositories
+
+[https://github.com/apaluya/tc-camp-api-workshop/releases](https://github.com/apaluya/tc-camp-api-workshop/releases)
 
 ## Think Like a Developer
 
