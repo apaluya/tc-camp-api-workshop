@@ -7,10 +7,8 @@ addons:
     - pandoc
 script:
 - pandoc --version
-- pandoc -t revealjs -s -o restful-apis.html restful-apis.md -V revealjs-url=https://revealjs.com
-  -V transition=cube -V theme=sky -i
-- pandoc -t revealjs -s -o docs-as-code.html docs-as-code.md -V revealjs-url=https://revealjs.com
-  -V transition=cube -V theme=sky -i
+- ./build.sh docs-as-code.md
+- ./build.sh restful-apis.md
 deploy:
   provider: releases
   api_key:
