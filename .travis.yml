@@ -8,4 +8,5 @@ addons:
 
 script:
   - pandoc --version
-  - pandoc -t revealjs -s -o $1.html $1 -V revealjs-url=https://revealjs.com -V transition=cube -V theme=sky -i
+  - pandoc -t revealjs -s -o restful-apis.html restful-apis.md -V revealjs-url=https://revealjs.com -V transition=cube -V theme=sky -i
+  - pandoc -t revealjs -s -o docs-as-code.html docs-as-code.md -V revealjs-url=https://revealjs.com -V transition=cube -V theme=sky -i
