@@ -7,60 +7,119 @@ author: Joanna Bujes and Paul Wallace
 
 # Docs as Code
 
-## Docs-as-code
+## Docs as Code
 
 With API doc in particular, it's common for developers to do at least some of the writing. It is much easier to have developers participate when your workflows and tools are similar.
 
 ## CI/CD
 
-_Continuous integration/continuous delivery_ is now a common way to manage, test, build, and deliver software... and increasingly doc as well.
+_Continuous integration/continuous delivery_ is now a common way to manage, test, build, and deliver software... and increasingly docs as well.
+
+_Docs as code_ means that docs production has been integrated into a CI/CD process.
+
+## CI/CD
+
+![Basic CI/CD pipeline](basic-pipeline.png)
+
+## Docs in a CI/CD Workflow
+
+- Source doc maintained in some flat file format
+- File versioning managed in a distributed version control system
+- Changes are merged into production
+- Merges trigger automated builds
+- Builds run tests and create artifacts
+- Artifacts are tagged and sent to a release repository
 
 ## Doc in a CI/CD Workflow
 
-- Source doc maintained in some flat file format
-- File versioning managed in source control
-- Changes merged into production
-- Merges trigger automated builds
-- Build runs tests and creates artifacts
-- Artifacts are tagged and sent to a release repository
+Process advantages:
+
+- Explicit, consistent steps
+- Visible to all stakeholders
+- Fully automated
+- Supports validation
+- Significantly faster
+- Significantly reduced fear
+
+## Doc in a CI/CD Workflow
+
+No more
+
+_"But it's in the email I sent..."_
+
+or
+
+_"It's on my computer somewhere..."_
+
 
 ## File Formats
 
-Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+- Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+- Flat files support versioning via changesets, whereas binary files must be overwritten entirely
 
-## File Formats -- markdown
-
-```
 ## File Formats
 
-Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+You should be comfortable working with the following file formats:
+
+- markdown
+- JSON
+- YAML
+
+
+## File Formats - Markdown
+
+```markdown
+## File Formats
+
+- Flat files are preferred, binary types (such as Word)
+  are discouraged as they don't play nice with Git
+- Flat files support versioning via changesets, whereas
+  binary files must be overwritten entirely
 ```
 
-## File Formats -- JSON
+## File Formats - JSON
 
-```
+```json
 {
   "id": 1,
   "title": "File Formats",
-  "body": "Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git"
+  "body": [
+          "Flat files are preferred, binary types
+            (such as Word) are discouraged as they
+            don't play nice with Git",
+          "Flat files support versioning via changesets,
+            whereas binary files must be overwritten
+            entirely"
+    ]
 }
 ```
 
-## File Formats -- YAML
+## File Formats - YAML
 
-```
+```yaml
 title: File Formats
-body: Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+body:
+  - "Flat files are preferred, binary types
+     (such as Word) are discouraged as they
+     don't play nice with Git"
+  - "Flat files support versioning via changesets,
+     whereas binary files must be overwritten
+     entirely"
 ```
 
-## File Formats -- reStructured Text
+## File Formats - reStructuredText
 
-```
-============
+```rest
+~~~~~~~~~~~~~
 File Formats
-============
+~~~~~~~~~~~~~
 
-Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+* Flat files are preferred, binary types (such as |MS|)
+  are discouraged as they don't play nice with Git
+* Flat files support versioning via changesets, whereas
+  binary files must be overwritten entirely
+
+.. |MS| replace:: Word
 ```
 
 ## Text Editors
@@ -68,14 +127,14 @@ Flat files are preferred, binary types (such as Word) are discouraged as they do
 - [Atom](https://atom.io/)
 - [Notepad++](https://notepad-plus-plus.org/)
 - [Sublime Text](https://www.sublimetext.com/)
-- [vim](https://www.vim.org/)
-- [emacs](https://www.gnu.org/software/emacs/)
+- [vim](https://www.vim.org/) or [emacs](https://www.gnu.org/software/emacs/) for CLI
 - many, many others
 
 ## Version Control
 
-Git predominates, though there are others (Subversion, Mercurial, Perforce)
+[Git](https://git-scm.com/) predominates, though there are others, such as [Mercurial](https://www.mercurial-scm.org/)
 
+- Git is not exactly intuitive
 - [git the simple guide](http://rogerdudler.github.io/git-guide/)
 
 ## Project Repositories
@@ -84,55 +143,106 @@ Code is managed in project repositories, which enable collaboration by distribut
 
 - [GitHub](https://github.com/)
 - [Gitlab](https://about.gitlab.com/)
-- [Bitbucket](https://bitbucket.org/).
+- [Bitbucket](https://bitbucket.org/)
+- Amazon AWS, Microsoft Azure, etc.
 
 ## Project Repositories
 
-
-[https://github.com/apaluya/tc-camp-api-workshop](https://github.com/apaluya/tc-camp-api-workshop)
+The doc for this presentation is hosted in GitHub at [https://github.com/apaluya/tc-camp-api-workshop](https://github.com/apaluya/tc-camp-api-workshop)
 
 ## Publishing Tools
 
-- [Doxygen](http://www.doxygen.nl/)
-- [Hugo](https://gohugo.io/)
-- [Javadoc](https://docs.oracle.com/en/java/javase/12/javadoc/javadoc.html)
+You'll need a build tool that can support the following
+
+- Build necessary deliverable types (HTML, PDF, etc.)
+- Run in an automated environment via scripts
+- Is sufficiently supported (bug fixes, etc.)
+
+## Publishing Tools
+
+In the API docs space, _static site generators_ are very popular
+
 - [Jekyll](https://jekyllrb.com/)
+- [Hugo](https://gohugo.io/)
 - [Pandoc](https://pandoc.org/)
 - [Sphinx](http://www.sphinx-doc.org/en/master/)
-- [Swagger](https://swagger.io/tools/)
-- many, many others
+- etc.
 
 ## Publishing Tools
 
-When selecting a tool, let your content needs be your guide, not the current fad!
+Some domain-specific tools include the following:
+
+- REST APIs: [Swagger tools](https://swagger.io/tools/)
+- Java: [Javadoc](https://docs.oracle.com/en/java/javase/12/javadoc/javadoc.html)
+- C-like langs: [Doxygen](http://www.doxygen.nl/)
+
+## Publishing Tools
+
+Let's build something!
+
+::: notes
+live code demo of building this presentation from the CLI
+:::
 
 ## Automation Server
 
-An automation server manages build jobs. Jenkins, Bamboo, and TeamCity are popular.
+An automation server manages build jobs. [Jenkins](https://jenkins.io/), [Bamboo](https://www.atlassian.com/software/bamboo), and [TeamCity](https://www.jetbrains.com/teamcity/) are popular within enterprises.
+
+[TravisCI](https://travis-ci.org/) and [CircleCI](https://circleci.com/) are popular for free open source software (FOSS) projects.
 
 ## Automation Server
 
-[Travis CI](https://travis-ci.org/apaluya)
+Let's look at an automation server!
+
+[https://travis-ci.org/apaluya](https://travis-ci.org/apaluya)
+
+::: notes
+open travis ci instance
+:::
 
 ## Artifact Repositories
 
-Build artifacts are managed in repositories such as Archiva, Artifactory, Sonatype Nexus. Artifacts are tagged and versioned.
+Build artifacts are managed in archive repositories. Artifacts are tagged and versioned and available for distribution.
+
+- [Artifactory](https://jfrog.com/artifactory/)
+- [Sonatype Nexus](https://www.sonatype.com/nexus-repository-sonatype)
+- [Archiva](https://archiva.apache.org/index.cgi)
+- many others
 
 ## Artifact Repositories
+
+Let's look at an artifact repository!
 
 [https://github.com/apaluya/tc-camp-api-workshop/releases](https://github.com/apaluya/tc-camp-api-workshop/releases)
 
-## Think Like a Developer
+## Keys to Good API Writing
+
+The keys to good API writing are the same as all technical writing:
+
+- Know your audience
+- Help them achieve their goals
+- Provide supporting resources
+- Don't waste your users' time!
+
+## Know Your Audience
+
+To understand what devs want, you should learn to think like a dev
 
 - Learn the basics of programming - just enough to be dangerous!
-- Learn a dynamically typed language (such as Python or Ruby)
-- Learn a statically typed language (such as Golang or Java)
-- Write small projects
-- Use other people's code in your projects
+- Write small projects and use other people's code
 - Read their API docs!
+- From this you'll gain insights and be able to anticipate dev needs
 
 
 ## Examples of Good API Doc
+
+Here are just a few examples of good API documentation. Notice that some are interactive or provide alternative media.
+
+- [Python](http://www.tldp.org/LDP/abs/html/index.html)
+- [Golang](https://golang.org/)
+- [NetData API](https://docs.netdata.cloud/web/api/)
+- [Clearbit API](https://clearbit.com/docs)
+- [Plaid API](https://plaid.com/docs/)
 
 
 # Questions?
