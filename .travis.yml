@@ -18,5 +18,7 @@ deploy:
   file:
     - docs-as-code.html
     - restful-apis.html
+  skip_cleanup: true
   on:
     repo: apaluya/tc-camp-api-workshop
+    tags: true
