@@ -5,9 +5,7 @@ date: April 26, 2019
 author: Joanna Bujes and Paul Wallace
 ---
 
-# Tools of the Trade
-
-# Docs-as-code
+# Docs as Code
 
 ## Docs-as-code
 
@@ -15,7 +13,7 @@ With API doc in particular, it's common for developers to do at least some of th
 
 ## CI/CD
 
-_Continuous integration/continuous delivery_ is now a common way to manage, test, build, and delivery software... and increasing doc as well.
+_Continuous integration/continuous delivery_ is now a common way to manage, test, build, and deliver software... and increasingly doc as well.
 
 ## Doc in a CI/CD Workflow
 
@@ -30,11 +28,40 @@ _Continuous integration/continuous delivery_ is now a common way to manage, test
 
 Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
 
-- markdown
-- reStructured Text
-- YAML
-- XML
-- JSON
+## File Formats -- markdown
+
+```
+## File Formats
+
+Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+```
+
+## File Formats -- JSON
+
+```
+{
+  "id": 1,
+  "title": "File Formats",
+  "body": "Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git"
+}
+```
+
+## File Formats -- YAML
+
+```
+title: File Formats
+body: Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+```
+
+## File Formats -- reStructured Text
+
+```
+============
+File Formats
+============
+
+Flat files are preferred, binary types (such as Word) are discouraged as they don't play nice with Git
+```
 
 ## Editors
 
@@ -46,23 +73,25 @@ Flat files are preferred, binary types (such as Word) are discouraged as they do
 
 Git predominates, though there are others (Subversion, Mercurial, Perforce)
 
-- git the simple guide: [http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/)
+- [git the simple guide](http://rogerdudler.github.io/git-guide/)
 
 ## Project repositories
 
-Code is managed in project repositories, which enable collaboration by distributed teams.
+Code is managed in project repositories, which enable collaboration by distributed teams. Popular project repositories include the following:
 
-Popular project repositories include GitHub, Gitlab, Bitbucket.
+- [GitHub](https://github.com/)
+- [Gitlab](https://about.gitlab.com/)
+- [Bitbucket](https://bitbucket.org/).
 
 ## Publishing tools
 
-- Doxygen
-- Hugo
-- Javadoc
-- Jekyll
-- Pandoc
-- Sphinx
-- Swagger
+- [Doxygen](http://www.doxygen.nl/)
+- [Hugo](https://gohugo.io/)
+- [Javadoc](https://docs.oracle.com/en/java/javase/12/javadoc/javadoc.html)
+- [Jekyll](https://jekyllrb.com/)
+- [Pandoc](https://pandoc.org/)
+- [Sphinx](http://www.sphinx-doc.org/en/master/)
+- [Swagger](https://swagger.io/tools/)
 - many, many others
 
 ## Publishing tools
@@ -71,11 +100,11 @@ When selecting a tool, let your content needs be your guide, not the current fad
 
 ## Automation server
 
-An automation server manages build jobs. Jenkins, Bamboo, and TeamCity are popular. This component will likely be provided by your organization; your DevOps team should be able to help.
+An automation server manages build jobs. Jenkins, Bamboo, and TeamCity are popular.
 
 ## Artifact repositories
 
-Build artifacts are managed in repositories such as Archiva, Artifactory, Sonatype Nexus. Artifacts are tagged and versioned. This component will likely be provided by your organization; your DevOps team should be able to help.
+Build artifacts are managed in repositories such as Archiva, Artifactory, Sonatype Nexus. Artifacts are tagged and versioned.
 
 ## Think Like a Developer
 
