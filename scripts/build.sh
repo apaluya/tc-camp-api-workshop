@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 
 # return on first non-zero exit code, print lines before executing
