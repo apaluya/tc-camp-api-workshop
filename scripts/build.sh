@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 
-# return on first non-zero exit code, print lines before executing
-set -ev
+# return on first non-zero exit code
+set -e
 
 # The script takes a filepath to a markdown file as an argument
 # Get the file basename and remove the extension from the filepath
