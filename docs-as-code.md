@@ -30,7 +30,7 @@ _Docs as code_ means that docs production has been integrated into a CI/CD proce
 - Builds run tests and create artifacts
 - Artifacts are tagged and sent to a release repository
 
-## Doc in a CI/CD Workflow
+## Docs in a CI/CD Workflow
 
 Process advantages:
 
@@ -39,9 +39,9 @@ Process advantages:
 - Fully automated
 - Supports validation
 - Significantly faster
-- Significantly reduced fear
+- Significantly reduced fear!
 
-## Doc in a CI/CD Workflow
+## Docs in a CI/CD Workflow
 
 No more
 
@@ -49,7 +49,7 @@ _"But it's in the email I sent..."_
 
 or
 
-_"It's on my computer somewhere..."_
+_"It's on his computer, I think..."_
 
 
 ## File Formats
@@ -150,13 +150,17 @@ Code is managed in project repositories, which enable collaboration by distribut
 
 The doc for this presentation is hosted in GitHub at [https://github.com/apaluya/tc-camp-api-workshop](https://github.com/apaluya/tc-camp-api-workshop)
 
+::: notes
+look at GitHub repository
+:::
+
 ## Publishing Tools
 
 You'll need a build tool that can support the following
 
 - Build necessary deliverable types (HTML, PDF, etc.)
 - Run in an automated environment via scripts
-- Is sufficiently supported (bug fixes, etc.)
+- Is sufficiently supported (bug fixes, community, etc.)
 
 ## Publishing Tools
 
@@ -188,7 +192,7 @@ live code demo of building this presentation from the CLI
 
 An automation server manages build jobs. [Jenkins](https://jenkins.io/), [Bamboo](https://www.atlassian.com/software/bamboo), and [TeamCity](https://www.jetbrains.com/teamcity/) are popular within enterprises.
 
-[TravisCI](https://travis-ci.org/) and [CircleCI](https://circleci.com/) are popular for free open source software (FOSS) projects.
+[TravisCI](https://travis-ci.org/) and [CircleCI](https://circleci.com/) are popular among free open source software (FOSS) projects.
 
 ## Automation Server
 
@@ -217,7 +221,7 @@ Let's look at an artifact repository!
 
 ## Keys to Good API Writing
 
-The keys to good API writing are the same as all technical writing:
+The keys to good API writing are the same as for all technical writing:
 
 - Know your audience
 - Help them achieve their goals
@@ -244,5 +248,10 @@ Here are just a few examples of good API documentation. Notice that some are int
 - [Clearbit API](https://clearbit.com/docs)
 - [Plaid API](https://plaid.com/docs/)
 
+## Further Learning
+
+[Open Data Kit](https://opendatakit.org/) is an open source project with a fabulous, warm, and welcoming group of documentarians. They produce a comprehensive guide detailing every step of their process. Participating in that project is a quick and easy way to gain experience with Docs as Code -- and you can put that on your resume!
+
+[ODK Docs Contributing Guide](https://docs.opendatakit.org/contributing/)
 
 # Questions?
