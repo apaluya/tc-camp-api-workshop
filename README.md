@@ -2,7 +2,7 @@
 
 This project contains material related to the [2019 TC Camp API Workshop](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/), _API Documentation for Beginners_.
 
-You can download the course material:
+The course material includes the following:
 
 - [API Basics (PPTX)](pptx/TC-Camp-API-Workshop-1.pptx)
 - [Documenting APIs: The Reality (PPTX)](pptx/TC-Camp-API-Workshop-2.pptx)
