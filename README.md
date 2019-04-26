@@ -9,6 +9,8 @@ The course material includes the following:
 - [RESTful APIs (HTML)](doc/restful-apis.md)
 - [Docs as Code (HTML)](doc/restful-apis.md)
 
+You can download the course material from the [releases page](https://github.com/apaluya/tc-camp-api-workshop/releases)
+
 ## Docs as Code Demo
 
 This project also supports the Docs as Code module by demonstrating several of the pipeline components described therein:
