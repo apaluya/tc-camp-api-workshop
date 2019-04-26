@@ -18,11 +18,13 @@ The build artifacts of this project are HTML slide presentations using [RevealJS
 
 ## To build from this project locally:
 
+_Prerequisite: Base installation of Pandoc_
+
 1. Clone this project.
-2. In a shell, `cd` in to the project directory.
+2. In a shell, `cd` into the project directory.
 3. Execute the following commands:
 
-        $ ./scripts/build.sh restful-apis.md
-        $ ./scripts/build.sh docs-as-code.md
+        $ ./scripts/build.sh doc/restful-apis.md
+        $ ./scripts/build.sh doc/docs-as-code.md
 
 HTML artifacts should appear in the top level of the project directory.
