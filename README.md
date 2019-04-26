@@ -14,6 +14,8 @@ Additionally, this project supports the Docs as Code module by demonstrating sev
 - Automation server is [TravisCI](https://travis-ci.org/apaluya/tc-camp-api-workshop)
 - Artifact repository is [GitHub Releases](https://github.com/apaluya/tc-camp-api-workshop/releases)
 
+The build artifacts of this project are HTML slide presentations using [RevealJS](https://github.com/hakimel/reveal.js/).
+
 ## To build from this project locally:
 
 1. Clone this project.
