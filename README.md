@@ -2,10 +2,16 @@
 
 This project contains material related to the [2019 TC Camp API Workshop](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/), _API Documentation for Beginners_.
 
-- [RESTful APIs](doc/restful-apis.md)
-- [Docs as Code](doc/restful-apis.md)
+The course material:
 
-Additionally, this project supports the Docs as Code module by demonstrating several of the pipeline components described therein:
+- [API Basics (PPTX)](pptx/TC-Camp-API-Workshop-1.pptx)
+- [Documenting APIs: The Reality (PPTX)](pptx/TC-Camp-API-Workshop-2.pptx)
+- [RESTful APIs (HTML)](doc/restful-apis.md)
+- [Docs as Code (HTML)](doc/restful-apis.md)
+
+## Docs as Code Demo
+
+This project also supports the Docs as Code module by demonstrating several of the pipeline components described therein:
 
 - Source content is maintained in markdown
 - Version control is git
