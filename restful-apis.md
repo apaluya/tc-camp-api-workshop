@@ -11,31 +11,27 @@ author: Joanna Bujes and Paul Wallace
 
 - REST is a type of API
 - REST is an architecture defined by constraints
-- REST is not bound by protocols, language, or syntax
 - REST is imminently suited to distributed networks
-- Countless RESTful APIs in the wild!
+- There are countless RESTful APIs in the wild!
 
 ## Key Points
 
-Tech writers can add value in the following ways:
+Tech writers add value in the following ways:
 
-- Documenting unexpected behavior
+- Providing tutorials, overviews, the usual stuff
+- Documenting service concepts and objects
 - Documenting service constraints
-- Providing tutorials, overviews, etc.
+- Documenting unexpected behavior
 - Copyediting endpoint descriptions
+- Naming
 
-## REST
+## What Is REST?
 
 - **Re**presentational **S**tate **T**ransfer
-- Predominant method of deploying web services
-- Provides scalability, portability, and uniformity
-
-## REST -- Principles over syntax
-
-- Not bound by protocols, language, or syntax
-- A set of principles derived from architectural constraints
-- There is much art in crafting a good RESTful API
-- If you violate the constraints, you might hear from Roy Fielding
+- REST is an architecture that is defined by constraints
+- RESTful designs are scalable, flexible, and consistent
+- Predominant method of providing web services
+- There's an API for everything!
 
 ## REST Constraints
 
@@ -46,63 +42,47 @@ Tech writers can add value in the following ways:
 - _Code on demand_: Responses can contain client-side code
 - _Uniform interface_: Named resources, complete messages, HATEOAS!
 
-## REST -- HATEOAS
+## HATEOAS
 
-_Hypertext As The Engine Of Application State_
+- _Hypertext As The Engine Of Application State_
 
-The service is discoverable progressively through links contained in responses
+    The service is discoverable progressively through links contained in responses
 
-# REST Exchanges
 
 ## REST Exchanges
 
-- Clients send requests to a server for some resource
-- Server responds with resource data
-- Resources have names -- URIs
-- URIs are often referred to as _endpoints_
+- The client sends a request to a server for some resource
+- Resources have names -- URIs or _endpoints_
+- The client qualifies the request by using a protocol method
+- The server responds with resource data
 
 ## URIs and URLs
 
-A Uniform Resource Identifier (URI) is a more general term for a Uniform Resource Location (URL)
+A Uniform Resource Identifier (URI) is a more general term for a Uniform Resource Locator (URL)
 
-`http://www.example.com/posts`
+`https://api.weather.gov/`
 
-## Protocol and data formats
+_All URLs are URIs, but not all URIs are URLs_
 
-- Requests and responses use some protocol (e.g., HTTP)
-- The protocol can carry message metadata and content
-- Common content formats include JSON and XML
-- The protocol provides methods for accessing data
+## URIs and URLs
 
-## Response objects
+`https://api.weather.gov/`
 
-Content data is often objects or collections of objects
+The left side of the `:` indicates the protocol to be used, and the right side is the resource name
 
-Fetching a single object:
+## Protocols
 
-`GET http://example.com/posts/1`
+- A communications protocol makes message exchange possible
+- Messages contain metadata _(message header)_ and content _(message body)_
+- The protocol defines message formatting rules
+- Most RESTful APIs use HTTP _(Hypertext Transfer Protocol)_
+- RESTful APIs commonly have JSON as message body content
 
-`{"id": 1, "title": "1st post", "body": "A 1st post"}`
+## Protocol Methods
 
-## Response objects
+Protocol methods define actions that can be applied to message data
 
-Fetching a collection of objects:
-
-`GET http://example.com/posts`
-
-`  [ {"id": 1, "1st post", "body": "A 1st post"},`
-
-`  {"id": 2, "title": "2nd post", "body": "A 2nd post"}]`
-
-## Adding to resource collections
-
-Authorized clients can alter resource data on the server
-
-`POST http://example.com/posts`
-
-`{"title": "Another post", "body": "This post is short."}`
-
-## Methods
+## Protocol Methods
 
 Common HTTP methods
 
@@ -113,31 +93,96 @@ GET | _Read_
 PUT/PATCH | _Update_
 DELETE | _Delete_
 
+::: notes
+there are other methods, and REST is not simply CRUD
+:::
 
-# System Design vs. Service
+## Nouns and Verbs
 
-## Architecture vs. Service
+You can think of endpoints or resources as "nouns", and the methods or actions that you'd like to perform on the resources as "verbs"
 
-- RESTful services should behave within architectural constraints
-- "Unexpected" behavior should be documented
-- Service constraints are outside of architecture, and should also be documented
+## Accessing Resources
+
+_"I want to get all of the widgets"_
+
+`GET https://widgetworld.com/widgets`
+
+A `GET` method applied to an endpoint without a trailing identifier returns a collection
+
+## Accessing Resources
+
+_"I want to get Widget 42"_
+
+`GET https://widgetworld.com/widgets/42`
+
+A `GET` method applied to an endpoint with a trailing identifier returns a single resource instance
+
+## Accessing Resources
+
+_"I want to add a widget"_
+
+`POST https://widgetworld.com/widgets`
+
+A `POST` method applied to an endpoint (along with resource content) adds a resource to the collection
+
+## Accessing Resources
+
+_"I want to update Widget 42"_
+
+`PUT https://widgetworld.com/widgets/42`
+
+A `PUT` method applied to an endpoint with a trailing identifier (along with resource content) updates the resource in the collection
+
+## Accessing Resources
+
+_"I want to remove Widget 42"_
+
+`DELETE https://widgetworld.com/widgets/42`
+
+A `DELETE` method applied to an endpoint with a trailing identifier removes the resource from the collection
+
+
+## REST Example
+
+![](lahaina.png)
+
+## REST Example
+
+Let's check the weather with REST using the [National Weather Service  API](https://www.weather.gov/documentation/services-web-api)
+
+- The NWS API is located at `https://api.weather.gov/`
+- The endpoint for weather in Lahaina, HI: [https://api.weather.gov/points/20.8861,-142.6747](https://api.weather.gov/points/20.8861,-142.6747)
+
+::: notes
+access the Lahaina, HI, geo endpoint
+inspect the HTTP headers and JSON content
+:::
+
+## Reference Content
+
+An API reference for a REST service documents the service endpoints and their associated methods and message data structures
+
+- [https://api.weather.gov/](https://www.weather.gov/documentation/services-web-api)
+
+::: notes
+inspect the spec section of the nws api site
+:::
+
+## Managing Expectations
+
+- RESTful services should abide by the architectural constraints
+- Behavior that violates those constraints is "unexpected" and should be documented
+- Non-architectural constraints pertain to the service, and should also be documented
+- Service objects need to be explained
 
 ## Service Constraints
 
-- Versioning
 - Authentication/Authorization
+- Versioning
 - Cacheing
 - Status codes
 - Rate limiting
 - Pagination
-- Client libraries
-
-## Versioning
-
-- Published APIs are set in stone -- if you change them, you will break users' code!
-- APIs can be volatile -- change is frequent
-- Versioning can save users from breaking changes
-- APIs should be versioned, and this should be explicit to the user
 
 ## Authentication & Authorization
 
@@ -148,12 +193,19 @@ DELETE | _Delete_
 
 Typical schemes include the following:
 
-- HTTPS basic auth
+- HTTPS basic auth (username/password)
 - API keys
 - JSON web tokens
 - OAuth
 
 Document the auth schemes used by your service
+
+## Versioning
+
+- Published APIs are set in stone -- if you change them, you will break users' code!
+- APIs can be volatile -- change is frequent
+- Versioning saves users from future breaking changes
+- APIs should be versioned, and this should be explicit
 
 ## Cacheing
 
@@ -216,19 +268,30 @@ Can response bodies contain a very large array of objects? With pagination, user
 
 Document pagination recommendations if necessary
 
-## Client Libraries
+## Service Objects
 
-An API for working with your API ;-)
+Conceptual content might include service objects. A service might use business domain objects -- e.g., a `Charge` object in a payment service. Document service objects and how to orchestrate them.
 
-Client libraries provide language-specific code for processing service data and simplifying usage
+## API Doc Content
 
-Document the library API, elucidate the workflows, and be sure to provide plenty of sample code!
+- Overiew
+- Getting started
+- Concepts, service object descriptions
+- Service constraints
+- The unexpected (tactfully described!)
+- Endpoint reference
+- Interactive examples
+- Client libraries
 
+## API Documentation Examples
 
-# Questions?
+- [Stripe](https://stripe.com/docs/api)
+- [NetData API](https://docs.netdata.cloud/web/api/)
+- [Clearbit API](https://clearbit.com/docs)
+- [Plaid API](https://plaid.com/docs/)
 
-## Resources
+## Further Learning
 
-- I'd Rather Be Writing: Documenting APIs [https://idratherbewriting.com/learnapidoc/](https://idratherbewriting.com/learnapidoc/)
+I'd Rather Be Writing: Documenting APIs [https://idratherbewriting.com/learnapidoc/](https://idratherbewriting.com/learnapidoc/)
 
-# Thank You
+## Questions?
