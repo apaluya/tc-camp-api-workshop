@@ -18,7 +18,7 @@ The build artifacts of this project are HTML slide presentations using [RevealJS
 
 ## To build from this project locally:
 
-_Prerequisite: Base installation of Pandoc on your local system_
+_Prerequisite: Base installation of Pandoc on your local system. See Pandoc documentation for details._
 
 1. Clone this project.
 2. In a shell, `cd` into the project directory.
