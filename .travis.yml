@@ -7,8 +7,8 @@ addons:
     - pandoc
 script:
 - pandoc --version
-- ./build.sh docs-as-code.md
-- ./build.sh restful-apis.md
+- ./scripts/build.sh docs-as-code.md
+- ./scripts/build.sh restful-apis.md
 deploy:
   provider: releases
   api_key:

@@ -144,7 +144,7 @@ A `DELETE` method applied to an endpoint with a trailing identifier removes the 
 
 ## REST Example
 
-![](lahaina.png)
+![](imgs/lahaina.png)
 
 ## REST Example
 

@@ -19,7 +19,7 @@ _Docs as code_ means that docs production has been integrated into a CI/CD proce
 
 ## CI/CD
 
-![Basic CI/CD pipeline](basic-pipeline.png)
+![Basic CI/CD pipeline](imgs/basic-pipeline.png)
 
 ## Docs in a CI/CD Workflow
 
@@ -132,7 +132,7 @@ File Formats
 
 ## Version Control
 
-[Git](https://git-scm.com/) predominates, though there are others, such as [Mercurial](https://www.mercurial-scm.org/)
+[Git](https://git-scm.com/) predominates, though there are other systems, such as [Mercurial](https://www.mercurial-scm.org/)
 
 - Git is not exactly intuitive
 - [git the simple guide](http://rogerdudler.github.io/git-guide/)
@@ -160,7 +160,7 @@ You'll need a build tool that can support the following
 
 - Build necessary deliverable types (HTML, PDF, etc.)
 - Run in an automated environment via scripts
-- Is sufficiently supported (bug fixes, community, etc.)
+- Is sufficiently supported (bug fixes, community support, etc.)
 
 ## Publishing Tools
 
@@ -170,7 +170,7 @@ In the API docs space, _static site generators_ are very popular
 - [Hugo](https://gohugo.io/)
 - [Pandoc](https://pandoc.org/)
 - [Sphinx](http://www.sphinx-doc.org/en/master/)
-- etc.
+- many others
 
 ## Publishing Tools
 
