@@ -4,8 +4,8 @@ This project contains material related to the [2019 TC Camp API Workshop](https:
 
 This project contains course material for the following modules:
 
-- [RESTful APIs (HTML)](doc/restful-apis.md)
-- [Docs as Code (HTML)](doc/restful-apis.md)
+- [RESTful APIs](doc/restful-apis.md)
+- [Docs as Code](doc/restful-apis.md)
 
 You can download the HTML deliverables from the [releases page](https://github.com/apaluya/tc-camp-api-workshop/releases)
 
