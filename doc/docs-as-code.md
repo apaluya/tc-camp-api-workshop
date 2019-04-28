@@ -1,11 +1,11 @@
 ---
 title: TC Camp API Workshop
-subtitle: "WiFi: https://www.sjpl.org/wireless"
+subtitle: Docs as Code
 date: April 26, 2019
 author: Joanna Bujes and Paul Wallace
 ---
 
-# Dawcs as Code!
+# Docs as Code
 
 ## Docs as Code
 
@@ -28,7 +28,7 @@ _Docs as code_ means that docs production has been integrated into a CI/CD proce
 - Changes are merged into production
 - Merges trigger automated builds
 - Builds run tests and create artifacts
-- Artifacts are tagged and sent to a release repository
+- Artifacts are tagged and sent to a repository
 
 ## Docs in a CI/CD Workflow
 
@@ -128,7 +128,7 @@ File Formats
 - [Notepad++](https://notepad-plus-plus.org/)
 - [Sublime Text](https://www.sublimetext.com/)
 - [vim](https://www.vim.org/) or [emacs](https://www.gnu.org/software/emacs/) for CLI
-- many, many others
+- many, many others -- use what works for you!
 
 ## Version Control
 
@@ -154,13 +154,27 @@ The doc for this presentation is hosted in GitHub at [https://github.com/apaluya
 look at GitHub repository
 :::
 
+
 ## Publishing Tools
 
-You'll need a build tool that can support the following
+You'll need a build tool that can support the following:
 
 - Build necessary deliverable types (HTML, PDF, etc.)
 - Run in an automated environment via scripts
-- Is sufficiently supported (bug fixes, community support, etc.)
+- Has sufficient support (good doc, bug fixes, large community, etc.)
+- Fulfills any additional constraints specific to your content set
+
+You'll likely have to manage this tool. Be clear about your requirements when picking a tool, and make sure you're comfortable with the maintenance overhead.
+
+## Publishing Tools
+
+In the immortal words of Eliot Kimber...
+
+> [All tools suck](http://drmacros-xml-rants.blogspot.com/2006/02/all-tools-suck.html)
+
+No one is 100% happy with their tools, particularly in docs.
+
+_(Seems like this should be acknowledged in any tools discussion)_
 
 ## Publishing Tools
 
@@ -176,9 +190,10 @@ In the API docs space, _static site generators_ are very popular
 
 Some domain-specific tools include the following:
 
-- REST APIs: [Swagger tools](https://swagger.io/tools/)
+- REST APIs: [Swagger](https://swagger.io/tools/), [Postman](https://www.getpostman.com/)
 - Java: [Javadoc](https://docs.oracle.com/en/java/javase/12/javadoc/javadoc.html)
 - C-like langs: [Doxygen](http://www.doxygen.nl/)
+- many, many others
 
 ## Publishing Tools
 
@@ -193,6 +208,19 @@ live code demo of building this presentation from the CLI
 An automation server manages build jobs. [Jenkins](https://jenkins.io/), [Bamboo](https://www.atlassian.com/software/bamboo), and [TeamCity](https://www.jetbrains.com/teamcity/) are popular within enterprises.
 
 [TravisCI](https://travis-ci.org/) and [CircleCI](https://circleci.com/) are popular among free open source software (FOSS) projects.
+
+## Automation Server
+
+Build job execution occurs as follows:
+
+1. User pushes a change to project repository.
+2. Project pings the automation server.
+3. Server creates a build job.
+4. Server clones the project into the job.
+5. Server provides a build environment from project config data.
+6. Server runs the project's build scripts.
+7. Server runs post-build commands (deliver artifacts, clean up, etc.)
+
 
 ## Automation Server
 
@@ -219,39 +247,45 @@ Let's look at an artifact repository!
 
 [https://github.com/apaluya/tc-camp-api-workshop/releases](https://github.com/apaluya/tc-camp-api-workshop/releases)
 
+## Continuous Integration
+
+An integration process might look like the following:
+
+ > dev > qa > staging > production
+
+## Continuous Integration
+
+> dev > qa > staging > production
+
+You create artifacts in the _dev_ step, and those get picked up from the artifact repository and passed along for further testing and evaluation. Integration is usually orchestrated by your DevOps team.
+
+
+
+## Further Learning
+
+[Open Data Kit](https://opendatakit.org/) is an open source project with a warm and welcoming group of documentarians. They produce a comprehensive guide detailing every step of their process. Participating in that project is a quick and easy way to gain experience with Docs as Code -- and you can put that on your resume!
+
+[ODK Docs Contributing Guide](https://docs.opendatakit.org/contributing/)
+
+# Workshop Conclusion
+
 ## Keys to Good API Writing
 
 The keys to good API writing are the same as for all technical writing:
 
-- Know your audience
+- Know your audience -- in this case, devs
 - Help them achieve their goals
 - Provide supporting resources
-- Don't waste your users' time!
+- Write in a minimalist style
 
 ## Know Your Audience
 
 To understand what devs want, you should learn to think like a dev
 
-- Learn the basics of programming - just enough to be dangerous!
+- Learn the basics of programming - just enough to be dangerous! _(Try [Python](http://www.tldp.org/LDP/abs/html/index.html) or [Golang](https://golang.org/))_
 - Write small projects and use other people's code
 - Read their API docs!
-- From this you'll gain insights and be able to anticipate dev needs
 
-
-## Examples of Good API Doc
-
-Here are just a few examples of good API documentation. Notice that some are interactive or provide alternative media.
-
-- [Python](http://www.tldp.org/LDP/abs/html/index.html)
-- [Golang](https://golang.org/)
-- [NetData API](https://docs.netdata.cloud/web/api/)
-- [Clearbit API](https://clearbit.com/docs)
-- [Plaid API](https://plaid.com/docs/)
-
-## Further Learning
-
-[Open Data Kit](https://opendatakit.org/) is an open source project with a fabulous, warm, and welcoming group of documentarians. They produce a comprehensive guide detailing every step of their process. Participating in that project is a quick and easy way to gain experience with Docs as Code -- and you can put that on your resume!
-
-[ODK Docs Contributing Guide](https://docs.opendatakit.org/contributing/)
+From this you'll gain insights into dev needs, and that'll help you write better doc.
 
 # Questions?

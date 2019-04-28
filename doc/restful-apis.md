@@ -1,6 +1,6 @@
 ---
 title: TC Camp API Workshop
-subtitle: "WiFi: https://www.sjpl.org/wireless"
+subtitle: RESTful APIs
 date: April 26, 2019
 author: Joanna Bujes and Paul Wallace
 ---
@@ -103,9 +103,19 @@ You can think of endpoints or resources as "nouns", and the methods or actions t
 
 ## Accessing Resources
 
+Let's pretend we have a widget service
+
+> `https://widgetworld.io`
+
+Their API provides access to a collection of widgets at this endpoint:
+
+> `https://widgetworld.io/widgets`
+
+## Accessing Resources
+
 _"I want to get all of the widgets"_
 
-`GET https://widgetworld.com/widgets`
+`GET https://widgetworld.io/widgets`
 
 A `GET` method applied to an endpoint without a trailing identifier returns a collection
 
@@ -113,15 +123,15 @@ A `GET` method applied to an endpoint without a trailing identifier returns a co
 
 _"I want to get Widget 42"_
 
-`GET https://widgetworld.com/widgets/42`
+`GET https://widgetworld.io/widgets/42`
 
-A `GET` method applied to an endpoint with a trailing identifier returns a single resource instance
+A `GET` method applied to an endpoint with a trailing identifier returns a single resource
 
 ## Accessing Resources
 
 _"I want to add a widget"_
 
-`POST https://widgetworld.com/widgets`
+`POST https://widgetworld.io/widgets`
 
 A `POST` method applied to an endpoint (along with resource content) adds a resource to the collection
 
@@ -129,7 +139,7 @@ A `POST` method applied to an endpoint (along with resource content) adds a reso
 
 _"I want to update Widget 42"_
 
-`PUT https://widgetworld.com/widgets/42`
+`PUT https://widgetworld.io/widgets/42`
 
 A `PUT` method applied to an endpoint with a trailing identifier (along with resource content) updates the resource in the collection
 
@@ -137,7 +147,7 @@ A `PUT` method applied to an endpoint with a trailing identifier (along with res
 
 _"I want to remove Widget 42"_
 
-`DELETE https://widgetworld.com/widgets/42`
+`DELETE https://widgetworld.io/widgets/42`
 
 A `DELETE` method applied to an endpoint with a trailing identifier removes the resource from the collection
 
@@ -151,7 +161,7 @@ A `DELETE` method applied to an endpoint with a trailing identifier removes the 
 Let's check the weather with REST using the [National Weather Service  API](https://www.weather.gov/documentation/services-web-api)
 
 - The NWS API is located at `https://api.weather.gov/`
-- The endpoint for weather in Lahaina, HI: [https://api.weather.gov/points/20.8861,-142.6747](https://api.weather.gov/points/20.8861,-142.6747)
+- The endpoint for weather in Lahaina, HI: [https://api.weather.gov/points/20.8861,-156.6747](https://api.weather.gov/points/20.8861,-156.6747)
 
 ::: notes
 access the Lahaina, HI, geo endpoint
@@ -293,5 +303,7 @@ Conceptual content might include service objects. A service might use business d
 ## Further Learning
 
 I'd Rather Be Writing: Documenting APIs [https://idratherbewriting.com/learnapidoc/](https://idratherbewriting.com/learnapidoc/)
+
+Tom Johnson has created a fantastic and thorough guide on documenting RESTful APIs. Read it and prosper.
 
 ## Questions?
