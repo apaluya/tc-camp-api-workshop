@@ -9,6 +9,8 @@ This project contains course material for the following modules:
 
 You can download the HTML deliverables from the [releases page](https://github.com/apaluya/tc-camp-api-workshop/releases)
 
+The PPTX slides for the other modules will be available on the [TC Camp website](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/)
+
 ## Docs as Code Demo
 
 This project also supports the Docs as Code module by demonstrating several of the pipeline components described therein:
