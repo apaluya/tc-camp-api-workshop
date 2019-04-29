@@ -1,6 +1,6 @@
 # 2019 TC Camp API Workshop
 
-This project contains material related to the [2019 TC Camp API Workshop](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/), _API Documentation for Beginners_.
+This project supports the [2019 TC Camp API Workshop](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/), _API Documentation for Beginners_.
 
 This project contains course material for the following sessions:
 
@@ -11,7 +11,7 @@ You can download the HTML deliverables from the [releases page](https://github.c
 
 The PPTX slides for the other sessions will be available on the [TC Camp website](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/)
 
-I'll be updating this project over time, adding more content and other improvements.
+I'll be updating this project over time, adding more content and other improvements. If there's something you'd like to see, you can [file an issue](https://github.com/apaluya/tc-camp-api-workshop/issues).
 
 ## Docs as Code Demo
 
