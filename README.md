@@ -11,6 +11,8 @@ You can download the HTML deliverables from the [releases page](https://github.c
 
 The PPTX slides for the other sessions will be available on the [TC Camp website](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/)
 
+I'll be updating this project over time, adding more content and other improvements.
+
 ## Docs as Code Demo
 
 This project also supports the _Docs as Code_ session by demonstrating several of the pipeline components described therein:
