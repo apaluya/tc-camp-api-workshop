@@ -1,15 +1,15 @@
 # 2019 TC Camp API Workshop
 
-This project supports the [2019 TC Camp API Workshop](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/), _API Documentation for Beginners_.
+This project supports the [2019 TC Camp API Workshop](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/), _API Documentation for Beginners_ held on April 26, 2019, in San Jose, CA.
 
-This project contains course material for the following sessions:
+This project contains my presentation material for the following sessions:
 
 - [RESTful APIs](doc/restful-apis.md)
 - [Docs as Code](doc/restful-apis.md)
 
-You can download the HTML deliverables from the [releases page](https://github.com/apaluya/tc-camp-api-workshop/releases)
+The material is delivered as HTML slide decks. You can download the deliverables from the [releases page](https://github.com/apaluya/tc-camp-api-workshop/releases).
 
-The PPTX slides for the other sessions will be available on the [TC Camp website](https://www.tccamp.org/2019/03/api-workshop-tccamp-2019/)
+[Joanna's PPTX slide deck](pptx/TC-Camp-API-Workshop.pptx) is available here as well.
 
 I'll be updating this project over time, adding more content and other improvements. If there's something you'd like to see, you can [file an issue](https://github.com/apaluya/tc-camp-api-workshop/issues).
 
