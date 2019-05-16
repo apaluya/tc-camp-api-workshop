@@ -5,7 +5,7 @@ This project supports the [2019 TC Camp API Workshop](https://www.tccamp.org/201
 This project contains my presentation material for the following sessions:
 
 - [RESTful APIs](doc/restful-apis.md)
-- [Docs as Code](doc/restful-apis.md)
+- [Docs as Code](doc/docs-as-code.md)
 
 The material is delivered as HTML slide decks. You can download the deliverables from the [releases page](https://github.com/apaluya/tc-camp-api-workshop/releases).
 
