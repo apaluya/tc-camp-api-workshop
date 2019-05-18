@@ -16,8 +16,7 @@ deploy:
   file:
     - docs-as-code.html
     - restful-apis.html
-    - pptx/TC-Camp-API-Workshop-1.pptx
-    - pptx/TC-Camp-API-Workshop-2.pptx
+    - pptx/TC-Camp-API-Workshop.pptx
   skip_cleanup: true
   on:
     repo: apaluya/tc-camp-api-workshop

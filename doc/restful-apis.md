@@ -162,7 +162,11 @@ A `DELETE` method applied to an endpoint with a trailing identifier removes the 
 
 ## REST Example
 
-![](imgs/lahaina.png)
+![](https://upload.wikimedia.org/wikipedia/commons/c/c7/Photo_May_07%2C_5_43_14_PM_.png)
+
+::: notes
+Ebbandflowlit [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)]
+:::
 
 ## REST Example
 
